@@ -17,8 +17,9 @@ function onOpen(e){
             modal.classList.remove('hide');
 
             modalBackground.classList.remove('hide');
+            console.log();
 
-            img.forEach(i=> i.addEventListener('click', onOpen));
+            Array.from(img).filter((i)=> e.target !=i).forEach(i=> i.addEventListener('click', onOpen));
         }, 1000);
         check++;
         
